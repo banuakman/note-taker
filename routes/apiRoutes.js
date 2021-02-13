@@ -18,11 +18,15 @@ module.exports = (app) => {
      let newNote = req.body;
      newNote.id = uuid.v4();
      notes.push(newNote);
-     // console.log(id);
      fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes));
-     res.json(newNote)
+     res.json(notes)
    });
 
-  // delete note
+  // API DELETE Requests
+  app.delete('/api/notes/:id', (req, res) => {
+    notes = notes.filter(note => note.id != req.params.id);
+    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes));
+    res.json(notes)
+});
 
 };
