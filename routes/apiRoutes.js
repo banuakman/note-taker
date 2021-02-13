@@ -1,6 +1,6 @@
-// LOAD DATA=====================================
+// LOAD DATA
 const fs = require('fs');
-const uuid = require('uuid');
+const uuid = require('uuid'); // to create unique id
 const path = require('path');
 
 var notes = JSON.parse (
