@@ -21,17 +21,22 @@ https://notetakerdeployed.herokuapp.com/
 1. Be sure that "node.js" is installed to your local machine. (see <a href="https://nodejs.org/en/download/" rel="nofollow">offical website</a> for installation)
 2. Clone this repo and open that folder in terminal.
 3. Install npm packages by running 
-```bash
-npm init -y-- npm install
-```
+    ```bash
+    npm init -y-- npm install
+    ```
 4. Install npm nodemon: 
-```bash
-npm i -D nodemon
-```
+    ```bash
+    npm i -D nodemon
+    ```
 5. Install npm express
-```bash
-npm install express
-```
+    ```bash
+    npm install express
+    ```
+6. Start the server
+    ```bash
+    node server
+    ```
+7. Open your browser and go to http://localhost:8080/
 
 ## Usage
 The following image show the web application's appearance and functionality:
