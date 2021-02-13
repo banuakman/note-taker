@@ -36,7 +36,7 @@ https://notetakerdeployed.herokuapp.com/
     ```bash
     node server
     ```
-7. Open your browser and go to http://localhost:8080/
+7. Open your browser and go to http://localhost:8080/,
 
 ## Usage
 The following image show the web application's appearance and functionality:
