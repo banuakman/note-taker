@@ -15,18 +15,24 @@ module.exports = (app) => {
 
   // API POST Requests
   app.post('/api/notes', (req, res) => {
-     let newNote = req.body;
-     newNote.id = uuid.v4();
-     notes.push(newNote);
-     fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes));
-     res.json(notes)
-   });
+    let newNote = req.body;
+    newNote.id = uuid.v4();
+    notes.push(newNote);
+    fs.writeFileSync(
+       path.join(__dirname, '../db/db.json'), 
+       JSON.stringify(notes)
+    );
+    res.send(`Note Saved!`)
+  });
 
   // API DELETE Requests
   app.delete('/api/notes/:id', (req, res) => {
     notes = notes.filter(note => note.id != req.params.id);
-    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes));
-    res.json(notes)
-});
+    fs.writeFileSync(
+      path.join(__dirname, '../db/db.json'),
+      JSON.stringify(notes)
+    );
+    res.send(`Note Deleted!`)
+  });
 
 };
